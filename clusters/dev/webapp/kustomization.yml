@@ -5,7 +5,8 @@ commonLabels:
   environment: "dev"
 bases:
   - ../../../apps/webapp
+
+namePrefix: dev-
 replicas:
   - name: web-app
     count: 1
-#namePrefix: dev-
