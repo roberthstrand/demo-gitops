@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  managedBy: "platform-team"
+  environment: "prod"
+bases:
+  - ../../../apps/webapp
+
+namePrefix: prod-
+replicas:
+  - name: web-app
+    count: 3
