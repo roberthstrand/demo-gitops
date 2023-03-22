@@ -9,4 +9,4 @@ bases:
 namePrefix: dev-
 replicas:
   - name: web-app
-    count: 1
+    count: 2
