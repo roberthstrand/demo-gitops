@@ -1,2 +1,3 @@
-# demo-gitops
-Source Repository for 'GitOps from infrastructure to application, with GitHub'
+# GitOps demo
+
+Source Repository for various demonstrations of GitOps for talks held by @roberthstrand.
