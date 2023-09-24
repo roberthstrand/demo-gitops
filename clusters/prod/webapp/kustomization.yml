@@ -9,4 +9,4 @@ bases:
 namePrefix: prod-
 replicas:
   - name: web-app
-    count: 4
+    count: 2
