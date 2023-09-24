@@ -12,6 +12,12 @@ module "kubernetes" {
   resource_group_name = azurerm_resource_group.cluster.name
   location            = azurerm_resource_group.cluster.location
 
+  additional_node_pools = [{
+    name = "worker"
+    vm_size = "Standard_D4s_v5"
+    node_count = 1
+  }]
+
   aad_rbac = {
     enabled = true
     managed = true
