@@ -10,3 +10,8 @@ namePrefix: dev-
 replicas:
   - name: web-app
     count: 1
+
+images:
+  - name: ghcr.io/roberthstrand/demo-webapp
+    newName: ghcr.io/roberthstrand/demo-webapp
+    newTag: v1.0.0
