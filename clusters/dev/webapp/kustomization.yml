@@ -23,6 +23,7 @@ patches:
     kind: Deployment
     metadata:
       name: web-app
+      namespace: webapp
     spec:
       template:
         spec:
