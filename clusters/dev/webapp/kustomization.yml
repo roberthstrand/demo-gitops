@@ -12,7 +12,7 @@ replicas:
 images:
   - name: ghcr.io/roberthstrand/demo-webapp
     newName: ghcr.io/roberthstrand/demo-webapp
-    newTag: ghcr.io/roberthstrand/demo-webapp:v2.0.0 # {"$imagepolicy": "flux-system:demo-webapp"}
+    newTag: ghcr.io/roberthstrand/demo-webapp:v2.0.1 # {"$imagepolicy": "flux-system:demo-webapp"}
 patches:
   - patch: |-
       apiVersion: apps/v1
