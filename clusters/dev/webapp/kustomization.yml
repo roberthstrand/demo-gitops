@@ -5,30 +5,26 @@ commonLabels:
   environment: "dev"
 resources:
   - ../../../apps/webapp
-
 namePrefix: dev-
 replicas:
   - name: web-app
     count: 1
-
-
 images:
   - name: ghcr.io/roberthstrand/demo-webapp
     newName: ghcr.io/roberthstrand/demo-webapp
-    newTag: v2.0.0 # {"$imagepolicy": "flux-system:demo-webapp"}
-
+    newTag: ghcr.io/roberthstrand/demo-webapp:v2.0.0 # {"$imagepolicy": "flux-system:demo-webapp"}
 patches:
-- patch: |-
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-      name: web-app
-      namespace: webapp
-    spec:
-      template:
-        spec:
-          containers:
-          - name: web-app
-            env:
-            - name: BGCOLOR
-              value: "red"
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: web-app
+        namespace: webapp
+      spec:
+        template:
+          spec:
+            containers:
+            - name: web-app
+              env:
+              - name: BGCOLOR
+                value: "red"
