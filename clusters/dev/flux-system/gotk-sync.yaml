@@ -11,7 +11,7 @@ spec:
     branch: dublin
   secretRef:
     name: flux-system
-  url: https://github.com/roberthstrand/demo-gitops.git
+  url: ssh://git@github.com/roberthstrand/demo-gitops
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
