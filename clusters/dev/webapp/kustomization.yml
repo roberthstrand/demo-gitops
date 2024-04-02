@@ -19,12 +19,15 @@ images:
 
 patches:
 - patch: |-
-    - op: add
-      path: /spec/template/spec/containers/0/env/-
-      value:
-        name: BGCOLOR
-        value: "red"
-    target:
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
       name: web-app
-      kind: Deployment
-      namespace: webapp
+    spec:
+      template:
+        spec:
+          containers:
+          - name: web-app
+            env:
+            - name: BGCOLOR
+              value: "red"
