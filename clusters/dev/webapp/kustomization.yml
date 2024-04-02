@@ -3,7 +3,7 @@ kind: Kustomization
 commonLabels:
   managedBy: "platform-team"
   environment: "dev"
-bases:
+resources:
   - ../../../apps/webapp
 
 namePrefix: dev-
@@ -15,4 +15,16 @@ replicas:
 images:
   - name: ghcr.io/roberthstrand/demo-webapp
     newName: ghcr.io/roberthstrand/demo-webapp
-    newTag: v1.0.0
+    newTag: v2.0.0
+
+patches:
+- patch: |-
+    - op: add
+      path: /spec/template/spec/containers/0/env/-
+      value:
+        name: BGCOLOR
+        value: "red"
+    target:
+      name: web-app
+      kind: Deployment
+      namespace: webapp
