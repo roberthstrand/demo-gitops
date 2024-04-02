@@ -14,4 +14,4 @@ replicas:
 images:
   - name: ghcr.io/roberthstrand/demo-webapp
     newName: ghcr.io/roberthstrand/demo-webapp
-    newTag: v2.0.0
+    newTag: v2.1.0
