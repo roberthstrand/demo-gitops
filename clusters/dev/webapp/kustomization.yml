@@ -11,19 +11,4 @@ replicas:
     count: 1
 images:
   - name: ghcr.io/roberthstrand/demo-webapp
-    newTag: ghcr.io/roberthstrand/demo-webapp:v2.0.1 # {"$imagepolicy": "flux-system:demo-webapp"}
-patches:
-  - patch: |-
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: web-app
-        namespace: webapp
-      spec:
-        template:
-          spec:
-            containers:
-            - name: web-app
-              env:
-              - name: BGCOLOR
-                value: "red"
+    newTag: ghcr.io/roberthstrand/demo-webapp:v2.0.0
